@@ -1,0 +1,56 @@
+﻿@page
+@using Microsoft.AspNetCore.Identity
+@using BarBuddySite.Areas.Identity.Data
+@model ProfileModel;
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+@{
+    var user = await UserManager.GetUserAsync(User);
+}
+@{
+    ViewData["Title"] = "Profile Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div id="ImageUpload">
+        <div id="InnerImageUpload">
+            <button id ="CloseEditPicture" onclick="CloseEditPicture()">Close</button>
+            <h4>Change Profile Image</h4>
+            <img src="data:image/@user.UserPhotoPath;base64,@Convert.ToBase64String(user.UserPhoto)" />
+            <form enctype="multipart/form-data" class="FileUpload form-group" method="post">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="custom-file">
+                    <label asp-for="Input.Image" class="custom-file-input">Choose File...</label>
+                    <input asp-for="Input.Image" class="form-control custom-file" />
+
+                    <span asp-validation-for="Input.Image" class="text-danger"></span>
+
+                </div>
+                <button type="submit">Upload</button>
+            </form>
+            </div>
+    </div>
+<div class="profile-side">
+    <ul>
+        <li><img src ="data:image/@user.UserPhotoPath;base64,@Convert.ToBase64String(user.UserPhoto)" /><button onclick="EditPicture()">Edit</button></li>
+        <li>@user.FirstName @user.LastName</li>
+        <li>@user.Email</li>
+    </ul>
+    </div>
+<div class="header">
+    <h1>Header</h1>
+</div>
+<div class="content">
+    <div class="loading">
+        <img id="loading-image" src="~/Images/Loading_Gif.webp" alt="Loading..." />
+    </div>
+    <div id="rss_feed1">
+        <h1>Personal Feed</h1>
+    </div>
+</div>
+@section css{
+    <link rel="stylesheet" href="~/css/profile.css" />
+}
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script src="~/js/profile.js" asp-append-version="true"></script>
+}

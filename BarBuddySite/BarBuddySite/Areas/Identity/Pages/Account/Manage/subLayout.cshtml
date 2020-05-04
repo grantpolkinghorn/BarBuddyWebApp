@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="parentIdentity">
+    <div class="childIdentity">
+        <h1>Manage your account</h1>
+        <h4>Change your account settings</h4>
+        <hr />
+        <div class="row">
+            <div class="col-md-3">
+                <partial name="_ManageNav" />
+            </div>
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+</div>
+@section css{ 
+    @RenderSection("css", false)
+}
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

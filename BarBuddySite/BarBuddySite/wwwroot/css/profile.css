@@ -1,0 +1,334 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+html, body {
+    background-image: url('../Images/Background.jpeg');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+ul {
+    color: white;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    width: 40%;
+    left: 30%;
+    margin: 0px;
+    padding: 0px;
+}
+
+    .menu ul {
+        border-style: none double double double;
+        border-width: 0px 3px 3px 3px;
+        border-color: #CCAC00;
+        border-radius: 0px 0px 10px 10px;
+        list-style-type: none;
+        overflow: hidden;
+        background-color: #333;
+        text-align: center;
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+    }
+
+.menu ul li {
+    display: inline-block;
+    margin: 0px;
+    width: 40%;
+    cursor: pointer;
+}
+
+    .menu ul li a {
+        display: inline-block;
+        color: white;
+        width: 100%;
+        text-align: center;
+        padding: 15px 0px;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+        .menu ul li a.active {
+            background-color: white;
+            color: #876300;
+        }
+
+    .menu a:hover {
+        background-color: #CCAC00;
+        color: white;
+    }
+
+    .menu a:active {
+        background-color: #CCAC00;
+        color: white;
+    }
+
+.profilePicture {
+    display: none;
+    padding: 0px;
+    background-color: #333;
+    position: absolute;
+    top: 0px;
+    right: 10%;
+    width: 7.5%;
+    height: 10%;
+    border-style: none double double double;
+    border-width: 0px 3px 3px 3px;
+    border-color: #CCAC00;
+    border-radius: 0px 0px 0px 10px;
+    margin: 0px;
+}
+
+    .profilePicture a {
+        position: absolute;
+        margin: 0px;
+        top: 50%;
+        left: 50%;
+        margin-right: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        transition: .3s;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+    }
+
+        .profilePicture a img {
+            width: 60%;
+            height: 90%;
+            border-radius: 50%;
+        }
+
+.login {
+    padding: 0px;
+    background-color: #333;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 10%;
+    height: 10%;
+    border-style: none double double double;
+    border-width: 0px 3px 3px 3px;
+    border-color: #CCAC00;
+    border-radius: 0px 0px 10px 10px;
+    margin: 0px;
+}
+
+    .login ul {
+        position: absolute;
+        font-size: 14px;
+        height: 100%;
+        width: 100%;
+        list-style-type: none;
+        overflow: hidden;
+        white-space: nowrap;
+        border-radius: 0px 0px 10px 10px;
+        margin: 0px;
+        padding: 0px;
+        right: 0px;
+        font-family: 'Lato', sans-serif;
+        
+    }
+
+        .login ul li {
+            display: block;
+            width: 100%;
+            height: 50%;
+            cursor: pointer;
+            text-align: center;
+            overflow: hidden;
+        }
+
+            .login ul li a {
+                display: block;
+                padding: 7.5px 0px;
+                transition: .3s;
+                color: white;
+                text-decoration: none;
+                text-align: center;
+            }
+
+            .login ul li button {
+                display: block;
+                transition: .3s;
+                padding: 7.5px 0px;
+                width: 100%;
+                background-color: #333;
+                border: none;
+                color: white;
+                text-decoration: none;
+                text-align: center;
+            }
+
+    .login a:hover {
+        background-color: #CCAC00;
+        color: white;
+    }
+
+    .login button:hover {
+        background-color: #CCAC00;
+        color: white;
+    }
+
+.profile-side {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    width: 20%;
+    height: 750px;
+    background-color: #CCAC00;
+}
+    .profile-side ul {
+        padding: 0px;
+        background-color: #333;
+        list-style-type: none;
+        text-decoration: none;
+        width: 100%;
+        margin: 0px;
+    }
+        .profile-side ul li {
+            text-align: center;
+            width: 100%;
+            
+            border-bottom: 2px solid #CCAC00;
+        }
+.profile-side ul li img{
+    margin: 10px 0px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    
+}
+#ImageUpload {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    top: 50%;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    z-index: 100;
+}
+#InnerImageUpload {
+    position: absolute;
+    margin: 0px;
+    top: 50%;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 30%;
+    border: 5px solid #876300;
+    background-color: #CCAC00;
+    border-radius: 5px;
+}
+#InnerImageUpload img {
+    position: absolute;
+    margin: 0px;
+    top: 40%;
+    left: 50%;
+    margin-right: 50%;
+    transform: translate(-50%, -50%);
+    width: 20%;
+    height: 70%;
+    background-color: #CCAC00;
+    border-radius: 50%;
+}
+    #InnerImageUpload #CloseEditPicture {
+        position: absolute;
+        margin: 0px;
+        top: 0%;
+        right: 0%;
+        width: 10%;
+        height: 20%;
+        background-color: #CCAC00;
+        color: white;
+        border-radius: 0px 0px 0px 5px;
+        border-left: 2px solid #876300;
+        border-bottom: 2px solid #876300;
+        border-left: 2px solid #876300;
+        border-top: none;
+        border-right: none;
+        transition: .3s;
+    }
+        #InnerImageUpload #CloseEditPicture:hover {
+            background-color: white;
+            color: #876300;
+            
+            border-left: 2px solid #876300;
+            border-bottom: 2px solid #876300;
+        }
+#InnerImageUpload .FileUpload {
+    position: absolute;
+    margin: 0px;
+    bottom: 0px;
+    height: 30%;
+    width: 100%;
+    border-radius: 5px;
+}
+
+    #InnerImageUpload .FileUpload input {
+        position: absolute;
+        bottom: 0%;
+        margin: 0px;
+        padding: 0px;
+        left: 5%;
+        width: 60%;
+        height: 85%;
+        background-color: white;
+    }
+    #InnerImageUpload .FileUpload label {
+        position: absolute;
+        left: 0%;
+        bottom: 0%;
+        margin: 0px;
+        padding: 0px;
+        width: 20%;
+        height: 100%;
+        background-color: white;
+    }
+    #InnerImageUpload .FileUpload button {
+        position: absolute;
+        right: 5%;
+        bottom: 20%;
+        margin: 0px;
+        padding: 0px;
+        width: 20%;
+        height: 50%;
+        background-color: #CCAC00;
+        color: white;
+        border-radius: 5px;
+        border: 2px solid #876300;
+        transition: .3s;
+    }
+        #InnerImageUpload .FileUpload button:hover {
+            background-color: white;
+            color: #876300;
+            border-radius: 5px;
+            border: 2px solid #876300;
+        }
+.header {
+    position: absolute;
+    left: 20%;
+    top: 15%;
+    width: 60%;
+    height: 35%;
+    background-color: #CCAC00;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    width: 60%;
+    height: auto;
+    background-color: #CCAC00;
+}

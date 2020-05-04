@@ -1,0 +1,14 @@
+﻿@page
+@model DownloadPersonalDataModel
+@{
+    ViewData["Title"] = "Download Your Data";
+    ViewData["ActivePage"] = ManageNavPages.PersonalData;
+}
+
+<h4>@ViewData["Title"]</h4>
+@section css{
+    <link rel="stylesheet" href="~/css/identity.css" />
+}
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
